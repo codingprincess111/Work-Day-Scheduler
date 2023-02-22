@@ -1,11 +1,33 @@
 $(function () {
-});
+  var everyRow = $(".container-lg").find(".time-block");
+  var currentHour = dayjs().hour()
+  var everyButtons = $(".container-lg").find(".saveBtn")
+
+  for(var i = 0; i < everyRow.length; i++) {
+    console.log(everyRow[i]);
+    var idRow = $(everyRow[i]).prop('id');
+    var blockTime = parseInt(idRow.slice(5));
+    var currentClass = $(everyRow[i]).prop('class');
+    if (blockTime < currentHour) {
+      $(everyRow[i]).removeClass(currentClass).addClass('row time-block past')
+    }
+    if(blockTime == currentHour) {
+      $(everyRow[i]).removeClass(currentClass).addClass('row time-block present')
+    }
+    if(blockTime > currentHour){
+      $(everyRow[i]).removeClass(currentClass).addClass('row time-block future')
+    }
+  }
+  });
+
+  for (var i = 0; i < allButtons.length; i++) {
+    
+  }
 
 
 $(function () {
-  $("#currrentDay").text(dayjs())
+  $("#currentDay").text(dayjs())
 })
-
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
