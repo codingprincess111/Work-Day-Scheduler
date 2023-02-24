@@ -37,7 +37,7 @@ $(function () {
 
 
 $(function () {
-  $("#currentDay").text(dayjs())
+  $("#currentDay").text(dayjs().format("dddd, MMMM D"))
 })
 
   // TODO: Add a listener for click events on the save button. This code should
