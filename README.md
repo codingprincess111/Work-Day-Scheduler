@@ -4,4 +4,6 @@ Purpose of the work day schedule is for users to easily create, modify, and save
 ## modified changes
 The first change I made was to create a function that allows the user to save tasks on the page. I then created a four loop to iterate over the row elements on the page to save enteries into local storage using 'getItem' method. When users click the saved button, data is saved used the 'setItem' method.
 
-![Screenshot of page after generating ] (./assets/images/)
+### Screenshot of generated page 
+
+![screenshot]
