@@ -4,6 +4,7 @@ $(function () {
   var currentHour = dayjs().hour()
   var everyButton = $(".container-lg").find(".saveBtn")
 
+  // go over every row element on the page, before during or after the hour the class is removed, and the entry saved into local storage// 
   for(var i = 0; i < everyRow.length; i++) {
     console.log(everyRow[i]);
     var idRow = $(everyRow[i]).prop('id');
@@ -24,7 +25,7 @@ $(function () {
     }
 
   }
-
+//when user clicks the save button, we save the data to local storage using the 'setItem' method and the ID of the time clock and the textarea value.//  
   everyButton.on('click', function() {
     var timeBlock = $(this).parent().prop('id');
     var blockText = $(this).siblings('.description').val();
@@ -35,7 +36,7 @@ $(function () {
 
   });
 
-
+//created a function for the current day amd date//
 $(function () {
   $("#currentDay").text(dayjs().format("dddd, MMMM D"))
 })
