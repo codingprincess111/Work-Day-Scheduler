@@ -6,4 +6,7 @@ The first change I made was to create a function that allows the user to save ta
 
 ### Screenshot of generated page 
 
-![screenshot]
+this project can be found here https://codingprincess111.github.io/Work-Day-Scheduler/ 
+
+![screenshot](./work-day-scheduler.png)
+
