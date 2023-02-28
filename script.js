@@ -14,7 +14,7 @@ $(function () {
     if (blockTime < currentHour) {
       $(everyRow[i]).removeClass(currentClass).addClass('row time-block past')
     }
-    if(blockTime == currentHour) {
+    if(blockTime === currentHour) {
       $(everyRow[i]).removeClass(currentClass).addClass('row time-block present')
     }
     if(blockTime > currentHour){
